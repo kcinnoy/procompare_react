@@ -1,0 +1,33 @@
+.ProductApp {
+  padding: 10px;
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  
+  form {
+    #query {
+      margin-right: 10px;
+    }
+  }
+
+  .chart-container {
+    flex: 1;
+    margin-top: 10px;
+  }
+}
+
+.search-bar {
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  form {
+    #query {
+      margin-right: 10px;
+    }
+  }
+}
