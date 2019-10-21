@@ -4,7 +4,7 @@ import cn from 'classnames';
 import { scaleBand, axisBottom, axisLeft, select, min, event } from 'd3';
 
 import Overlay from '../Overlay';
-import { rank, sortUniqueValues } from '../../utils';
+import { rank, sortUniqueValues } from '../../../utils';
 import './Chart.scss';
 
 class Chart extends React.Component {

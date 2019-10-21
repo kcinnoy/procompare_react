@@ -1,8 +1,8 @@
 import React, {useContext, useState} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components'
 
-import { etsyController } from './controllers';
+import { etsyController } from './contollers';
 import { Chart, Loader } from './components';
 
 import './App.scss';
