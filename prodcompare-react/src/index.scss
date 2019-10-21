@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.app-container {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 4fr;
+  grid-template-areas: 
+    "nav-header nav-header"
+    "Sidebar  compare-container"
+    "footer footer";
+}
+
+.nav-header {
+  grid-area: nav-header;
+}

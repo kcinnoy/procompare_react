@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
@@ -14,9 +14,14 @@ import Logout from './utils/LogOut';
 const routing = (
     <CurrentUserProvider>
         <UserAuthenticator />
-        <div className="App">
-            <div>
+        <div className="app-container">
+            <div className="nav-header">
                 <NavBar />
+            </div>
+            <div className="compare-container">
+                <App />
+            </div>
+            <div className="footer">
             </div>
         </div>
     <Router>
