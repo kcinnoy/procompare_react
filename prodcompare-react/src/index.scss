@@ -13,15 +13,29 @@ code {
 }
 
 
-.app-container {
-  display: grid;
-  grid-template: 1fr 1fr 1fr / 1fr 4fr;
-  grid-template-areas: 
-    "nav-header nav-header"
-    "Sidebar  compare-container"
-    "footer footer";
-}
+// .app-container {
+//   display: grid;
+//   grid-template: auto 1fr 40px/ 1fr 4fr;
+//   grid-template-areas: 
+//     "nav-header nav-header"
+//     "Sidebar  compare-container"
+//     "footer footer";
+// }
 
-.nav-header {
-  grid-area: nav-header;
-}
+// .nav-header {
+//   grid-area: nav-header;
+// }
+
+// .sidebar {
+//   grid-area: sidebar;
+// }
+
+// .compare-container {
+//   grid-area: compare-container;
+// }
+
+// .footer {
+//   grid-area: footer;
+// }
+
+

@@ -19,7 +19,7 @@ const routing = (
                 <NavBar />
             </div>
             <div className="compare-container">
-                <App />
+                {/* <App /> */}
             </div>
             <div className="footer">
             </div>

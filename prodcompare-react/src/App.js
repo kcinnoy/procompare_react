@@ -39,7 +39,6 @@ function App() {
         />
       </form>
 
-      {/* <NavBar /> */}
       <Chart className='chart-container' data={result} />
       <Loader visible={loading} />
     </div>
