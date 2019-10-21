@@ -3,7 +3,7 @@ import React, {useContext} from 'react';
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
 import {Redirect} from 'react-router-dom';
-import Api from "./api";
+import Api from "./Api";
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
 

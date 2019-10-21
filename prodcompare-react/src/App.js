@@ -1,5 +1,5 @@
 import React, {useContext, useState} from 'react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components'
 
 import { etsyController } from './contollers';
@@ -39,7 +39,7 @@ function App() {
         />
       </form>
 
-      <NavBar />
+      {/* <NavBar /> */}
       <Chart className='chart-container' data={result} />
       <Loader visible={loading} />
     </div>

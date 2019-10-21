@@ -15,7 +15,9 @@
     "react-scripts": "3.2.0",
     "react-strap": "^0.0.1",
     "reactstrap": "^8.1.1",
-    "styled-components": "^4.4.0"
+    "styled-components": "^4.4.0",
+    "toaster-js": "^2.2.0",
+    "toastr": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

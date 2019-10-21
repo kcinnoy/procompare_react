@@ -4,12 +4,13 @@ import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-import Api from '../utils/api';
+import Api from '../utils/Api';
 
 import {CurrentUserContext} from "../contexts/CurrentUserContext";
 
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
+
 
 const LoginModal = (props) => {
     const [currentUser, token, setToken] = useContext(CurrentUserContext);
