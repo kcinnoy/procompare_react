@@ -14,8 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "react-strap": "^0.0.1",
-    "styled-components": "^4.4.0",
-    "webpack-dev-server": "^3.8.2"
+    "reactstrap": "^8.1.1",
+    "styled-components": "^4.4.0"
   },
   "scripts": {
     "start": "react-scripts start",

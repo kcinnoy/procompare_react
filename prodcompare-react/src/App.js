@@ -3,7 +3,7 @@ import React, {useContext, useState} from 'react';
 import styled from 'styled-components'
 
 import { etsyController } from './contollers';
-import { Chart, Loader } from './components';
+import { Chart, Loader, NavBar } from './components';
 
 import './App.scss';
 
@@ -38,6 +38,8 @@ function App() {
           value="Search" 
         />
       </form>
+
+      <NavBar />
       <Chart className='chart-container' data={result} />
       <Loader visible={loading} />
     </div>
