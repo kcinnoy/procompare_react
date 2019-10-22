@@ -2,9 +2,36 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
+import { Toast } from "toaster-js";
+import "toaster-js/default.scss";
+
 import './Overlay.scss';
+import Api from "../../../utils/Api";
 
 class Overlay extends React.Component {
+    async markAsFavorite(product) {
+    await Api.post('/favorites.json', {
+        "ref_id"  : product.listing_id,
+        "title" : product.title,
+        "price" : product.price,
+        "image" : product.MainImage.url_fullxfull,
+        "num_favorers" : product.Shop.num_favorers,
+        "url" : product.url
+    }, {
+          withCredentials: true,
+          headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json',
+            'Authorization': localStorage.getItem('token')
+          },
+        }
+    ).then(response => {
+      new Toast("You have successfully marked this product as favorite");
+    }).catch(error => {
+     new Toast(error);
+    });
+  };
+
   render() {
     const { className, product, style } = this.props;
     if ( !product ) {
@@ -29,7 +56,7 @@ class Overlay extends React.Component {
           <strong>FAVORITED: </strong>
           {` ${product.Shop.num_favorers} TIMES`}
         </div>
-        <div className='overlay-like-btn'>
+        <div onClick={() => this.markAsFavorite(product)} className='overlay-like-btn'>
           <i className="fa fa-heart" />
           FAVORITE
         </div>
