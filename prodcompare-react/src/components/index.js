@@ -1,7 +1,7 @@
 import Chart from './chart/ChartVis';
 import Loader from './chart/Loader';
 import Overlay from './chart/Overlay';
-import Favorites from './Favorites';
+import Favorites from './favorites';
 import NavBar from './NavBar'
 
 export {

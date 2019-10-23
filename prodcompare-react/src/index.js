@@ -4,7 +4,7 @@ import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Route, BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import Favorites from './components/Favorites';
+import Favorites from './components/favorites/Favorites';
 import * as serviceWorker from './serviceWorker';
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import UserAuthenticator from "./utils/UserAuthenticator";

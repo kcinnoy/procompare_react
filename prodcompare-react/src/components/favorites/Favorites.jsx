@@ -1,5 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
-import Api from '../utils/Api';
+import Api from '../../utils/Api';
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
 
@@ -8,7 +8,7 @@ import {
     CardTitle, CardSubtitle, Button
 } from 'reactstrap';
 
-import {CurrentUserContext} from "../contexts/CurrentUserContext";
+import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 
 const Favorites = () => {
     const [currentUser, setCurrentUser] = useContext(CurrentUserContext);
