@@ -47,25 +47,27 @@
   grid-column: 5 / 6;
   padding: 10px;
   background: rgba(17,153,142, 0.1);
-  border-radius: 5px
+  border-radius: 5px;
+color: #323232
 }
 
 .authentication {
   grid-column: 6 / 7;
   padding: 10px;
   background: rgba(17,153,142, 0.2);
-  border-radius: 5px
+  border-radius: 5px;
+  color: #323232;
 }
 
 
 
 
 .navLinks {
-  font-family: 'Open+Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1.2em;
   // text-transform: uppercase;
   text-decoration: none;
-  color: black;
+  color: #323232;
 }
 
 .navLinks:hover {
@@ -74,6 +76,7 @@
   // border-right: 1px solid white;
   // padding: 1em 1em;
   text-decoration: none;
+  color: #6f6f6f
 }
 
 #twist {

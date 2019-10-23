@@ -8,6 +8,8 @@ import { etsyController } from '../contollers';
 
 import './App.scss';
 
+
+
 function App() {
   const [loading, setLoading] = useState(false);
   const [query, setQuery] = useState('');
@@ -28,18 +30,21 @@ function App() {
   return (
     <div className='App'>
     <NavBar />
-      <form onSubmit={handleSubmit}>
-        <input 
-          id='query'
-          type="text" 
-          value={query} 
-          onChange={(e) => setQuery(e.target.value)} 
-        />
-        <input 
-          type="submit" 
-          value="Search" 
-        />
-      </form>
+      <div className="search-wrapper">
+        <form onSubmit={handleSubmit} className="search-container">
+          <input  className="search-container-search"
+            id='query'
+            type="text" 
+            value={query} 
+            onChange={(e) => setQuery(e.target.value)} 
+            id="search-bar" placeholder="What can I help you with today?"
+          />
+          <input className="search-container-icon"
+            type="submit" 
+            value="Search" 
+          />
+        </form>
+      </div>
 
       <Chart className='chart-container' data={result} />
       <Loader visible={loading} />
