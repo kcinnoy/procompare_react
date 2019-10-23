@@ -28,7 +28,7 @@ const routing = (
         <div>
             <Route exact path="/" component={App} />
             <Route exact path="/products" component={App} />
-            {/* <Route exact path="/favorites" component={Favorites} /> */}
+            <Route exact path="/favorites" component={Favorites} />
             <Route exact path="/logout" component={Logout} />
         </div>
     </Router>
