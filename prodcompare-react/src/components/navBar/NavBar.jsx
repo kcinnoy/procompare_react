@@ -1,9 +1,9 @@
 import React, {useContext, useState} from 'react';
 
 import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
-import LoginModal from "../modals/login";
-import SignUpModal from "../modals/signup";
-import {CurrentUserContext} from "../contexts/CurrentUserContext";
+import LoginModal from "../../modals/login";
+import SignUpModal from "../../modals/signup";
+import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 
 const NavBar = () => {
     const [currentUser, token] = useContext(CurrentUserContext);

@@ -8,7 +8,7 @@ import Favorites from './components/favorites/Favorites';
 import * as serviceWorker from './serviceWorker';
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
 import UserAuthenticator from "./utils/UserAuthenticator";
-import NavBar from './components/NavBar';
+import NavBar from './components/navBar/NavBar';
 import Logout from './utils/LogOut';
 
 const routing = (
