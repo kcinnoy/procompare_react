@@ -1,9 +1,10 @@
 import React, {useContext, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styled from 'styled-components'
 
-import { etsyController } from './contollers';
-import { Chart, Loader, NavBar } from './components';
+import { Chart, Loader, NavBar } from '.';
+
+import { etsyController } from '../contollers';
+
 
 import './App.scss';
 
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <div className='App'>
+    <NavBar />
       <form onSubmit={handleSubmit}>
         <input 
           id='query'

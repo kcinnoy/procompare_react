@@ -1,29 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom';
+
 import './index.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route, BrowserRouter as Router } from 'react-router-dom';
-import App from './App';
+
+
+import App from './components/App';
 import Favorites from './components/favorites/Favorites';
+import Logout from './utils/LogOut';
+
 import * as serviceWorker from './serviceWorker';
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
-import UserAuthenticator from "./utils/UserAuthenticator";
-import NavBar from './components/navBar/NavBar';
-import Logout from './utils/LogOut';
+// import UserAuthenticator from "./utils/UserAuthenticator";
 
 const routing = (
     <CurrentUserProvider>
-        <UserAuthenticator />
-        <div className="app-container">
-            <div className="nav-header">
-                <NavBar />
-            </div>
-            <div className="compare-container">
-                {/* <App /> */}
-            </div>
-            <div className="footer">
-            </div>
-        </div>
+        {/* <UserAuthenticator /> */}
     <Router>
         <div>
             <Route exact path="/" component={App} />

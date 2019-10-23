@@ -1,4 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react';
+
+import NavBar from '../navBar';
+
 import Api from '../../utils/Api';
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
@@ -44,7 +47,9 @@ const Favorites = () => {
     };
 
     return (
+       
         <Container fluid={true}>
+         <NavBar />
             <Row>
                 <Col sm="12" lg="12">
                     <center>
