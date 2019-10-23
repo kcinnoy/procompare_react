@@ -4,7 +4,7 @@ import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-import Api from '../utils/Api';
+import Api from '../../utils/Api';
 
 const LoginModal = (props) => {
     const [email, setEmail] = useState();
