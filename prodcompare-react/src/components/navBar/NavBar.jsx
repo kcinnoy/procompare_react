@@ -19,25 +19,27 @@ const NavBar = () => {
     <div className="NavWrapper">
       <div className="nav">
         <div className="logo">
-          <a href="#" className="navLinks"></a>
+          <a href="/" className="navLinks">
+						<div className="logo-image">P</div>
+					</a>
         </div>
 
 				
         <div className="brand">
-          <a href="#" className="navLinks">prodCompare</a>
+          <a href="/">ProdCompare</a>
         </div>
 				
 				{/* Show favorites or Login modal*/}
 				{ currentUser() && currentUser().email ?
-					(<div>
-						<a href="/favorites/">FAVORITES</a>
+					(<div className="favorites-route">
+						<a href="/favorites/">Favorites</a>
 					</div>) : 
 					<LoginModal />
 				}
 
 					{/* Show logout or Signup modal*/}
 				{ currentUser() && currentUser().email ?
-					(<div><a href="/logout/">Log out</a></div>) : 
+					(<div className="signout-route"><a href="/logout/">Sign out</a></div>) : 
 					 <SignUpModal/>
 				}		
 
