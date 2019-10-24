@@ -1,7 +1,7 @@
 import React, {useContext, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import { Chart, Loader, NavBar } from '.';
+import { Chart, Loader, NavBar, Home } from '.';
 
 import { etsyController } from '../contollers';
 
@@ -53,9 +53,17 @@ function App() {
       </div>
 
       <div className="main-section">
+
+      {query && result ? 
         <div className="chart-section">
           <Chart className='chart-container' data={result} />
-        </div>
+        </div> :
+          <Home />
+        }		
+
+
+
+        
       </div>
       <Loader visible={loading} />
     </div>
