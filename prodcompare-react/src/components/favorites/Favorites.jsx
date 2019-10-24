@@ -2,6 +2,8 @@ import React, {useState, useEffect, useContext} from 'react';
 
 import NavBar from '../navBar';
 
+import './Favorites.scss';
+
 import Api from '../../utils/Api';
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
@@ -52,23 +54,19 @@ const Favorites = () => {
          <NavBar />
             <Row>
                 <Col sm="12" lg="12">
-                    <center>
-                    <h1>Your favorite(s)</h1>
-                    </center>
+                  <div className="favorite-title">Your favorite Item(s)</div>
 
                     {favorites.map((product) => (
-                            <Col lg="3" key={product.id} className="float-left" style={{padding: '.5rem'}}>
-                                <div>
-                                    <Card>
-                                        {product.image ? (
-                                            <CardImg top height="400px" src={product.image} alt="Card image cap"/>
-                                        ) : null}
-
-                                        <CardBody>
-                                            <CardTitle>{product.title.slice(0, 40)}</CardTitle>
-                                            <CardSubtitle>Price: {product.price}</CardSubtitle>
-                                            <CardText>Num Favorer: {product.num_favorers}</CardText>
-                                            <Button onClick={() => removeFavorite(product)}>Remove From Favorite</Button>
+                      <Col lg="3" key={product.id} className="float-left" style={{padding: '.5rem'}}>
+                        <div>
+                            <Card>
+															{product.image ?
+																(<CardImg top height="400px" src={product.image} alt="Card image cap"/>) : null}
+                                  <CardBody className="card-body">
+                                    <CardTitle className="card-title">{product.title.slice(0, 60)}</CardTitle>
+                                      <CardSubtitle>Price: £{product.price}</CardSubtitle>
+                                            <CardText>Favorited {product.num_favorers} times </CardText>
+                                            <Button className="remove-btn" onClick={() => removeFavorite(product)}>Remove</Button>
                                         </CardBody>
                                     </Card>
                                 </div>

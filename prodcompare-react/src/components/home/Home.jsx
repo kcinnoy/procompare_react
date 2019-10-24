@@ -4,7 +4,7 @@ import './Home.scss';
 import astroFind from '../astronaut-find.png'; 
 import { ReactComponent as RocketIcon } from '../rocket.svg';
 import { ReactComponent as MeteoriteIcon } from '../meteorite.svg';
-import { ReactComponent as ObservatoryIcon } from '../observatory.svg';
+import { ReactComponent as EmeraldIcon } from '../emerald.svg';
 
 const Home = () => {
   return (
@@ -14,11 +14,11 @@ const Home = () => {
           Explore Amazing Products
         </div>
         <div className="explainer-content">
-          Find amazing products easily. Compare products with a click of a button and save them to your favorites.
+          Find amazing products easily and quickly. Compare products with a click of a button and save them to your favorites.
         </div>
         <div className="explainer-content">
           <div className="explainer-icon">
-            <RocketIcon />
+            <EmeraldIcon />
           </div>
           <div className="explainer-item">
             Quickly compare products across multiple criteria
@@ -26,7 +26,7 @@ const Home = () => {
         </div>
         <div className="explainer-content">
           <div className="explainer-icon">
-            <ObservatoryIcon />
+          <EmeraldIcon />
           </div>
           <div className="explainer-item">
             View all results on the same page
@@ -34,7 +34,7 @@ const Home = () => {
         </div>
         <div className="explainer-content">
           <div className="explainer-icon">
-            <MeteoriteIcon />
+          <EmeraldIcon />
           </div>
           <div className="explainer-item">
             Inspect in detail only the items your interested in
