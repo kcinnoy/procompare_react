@@ -42,7 +42,7 @@ function App() {
               type="text" 
               value={query} 
               onChange={(e) => setQuery(e.target.value)} 
-              id="search-bar" placeholder="Find something amazing today...."
+              id="search-bar" placeholder="Explore / Search products...."
             />
             <input className="search-container-icon"
               type="submit" 
@@ -52,7 +52,9 @@ function App() {
         </div>
       </div>
 
-      <Chart className='chart-container' data={result} />
+      <div className="chart-section">
+        <Chart className='chart-container' data={result} />
+      </div>
       <Loader visible={loading} />
     </div>
   );
