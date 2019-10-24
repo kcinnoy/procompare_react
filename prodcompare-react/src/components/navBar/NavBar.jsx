@@ -21,16 +21,26 @@ const NavBar = () => {
         <div className="logo">
           <a href="#" className="navLinks"></a>
         </div>
+
+				
         <div className="brand">
           <a href="#" className="navLinks">prodCompare</a>
         </div>
-        <div className="registration">
-          <a href="#" className="navLinks">LOG IN</a>
-        </div>
-        <div className="authentication">
-          <a href="#" className="navLinks">SIGN UP</a>
-        </div>
 				
+				{/* Show favorites or Login modal*/}
+				{ currentUser() && currentUser().email ?
+					(<div>
+						<a href="/favorites/">FAVORITES</a>
+					</div>) : 
+					<LoginModal />
+				}
+
+					{/* Show logout or Signup modal*/}
+				{ currentUser() && currentUser().email ?
+					(<div><a href="/logout/">Log out</a></div>) : 
+					 <SignUpModal/>
+				}		
+
       </div>
 			<div className="gradient-border"></div>
     </div>

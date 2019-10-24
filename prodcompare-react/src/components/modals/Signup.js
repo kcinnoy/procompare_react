@@ -6,6 +6,8 @@ import {Form, FormGroup, Label, Input} from 'reactstrap';
 
 import Api from '../../utils/Api';
 
+import './Modals.scss';
+
 const LoginModal = (props) => {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -38,8 +40,8 @@ const LoginModal = (props) => {
     };
 
     return (
-        <div>
-            <Button color="success" onClick={toggle}>Sign Up</Button>
+        <div className="authentication">
+            <div onClick={toggle}>Sign Up</div>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>Registration</ModalHeader>
                 <ModalBody>

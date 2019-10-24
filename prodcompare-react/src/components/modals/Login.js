@@ -6,6 +6,8 @@ import {Form, FormGroup, Label, Input} from 'reactstrap';
 
 import Api from '../../utils/Api';
 
+import './Modals.scss';
+
 import {CurrentUserContext} from "../../contexts/CurrentUserContext";
 
 import {Toast} from "toaster-js";
@@ -54,8 +56,8 @@ const LoginModal = (props) => {
     };
 
     return (
-        <div>
-            <Button color="success" onClick={toggle}>Login</Button>
+        <div className="registration" >
+            <div onClick={toggle}>Login</div>
             <Modal isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>Login</ModalHeader>
                 <ModalBody>
