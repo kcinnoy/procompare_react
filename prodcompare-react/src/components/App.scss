@@ -11,10 +11,6 @@
       margin-right: 10px;
     }
   }
-
-  .chart-container {
-    flex: 1;
-  }
 }
 
 .search-section {
@@ -121,9 +117,17 @@ input.search-container-icon {
 }
 
 .chart-section {
+  display: flex;
   padding: 20px;
+  height: 100vh;
+  max-height: 700px
 }
 
+
+.chart-container {
+  flex: 1;
+ 
+}
 
 
 // form input[type=”submit”]

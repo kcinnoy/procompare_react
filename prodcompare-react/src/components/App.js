@@ -52,8 +52,10 @@ function App() {
         </div>
       </div>
 
-      <div className="chart-section">
-        <Chart className='chart-container' data={result} />
+      <div className="main-section">
+        <div className="chart-section">
+          <Chart className='chart-container' data={result} />
+        </div>
       </div>
       <Loader visible={loading} />
     </div>

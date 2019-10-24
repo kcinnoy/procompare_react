@@ -82,8 +82,8 @@ const LoginModal = (props) => {
                     </Form>
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="primary" onClick={() => submitLoginForm()}>Login</Button>{' '}
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
+                    <div className="modal-btn" onClick={() => submitLoginForm()}>Login</div>{' '}
+                    <div className="modal-btn" onClick={toggle}>Cancel</div>
                 </ModalFooter>
             </Modal>
         </div>
