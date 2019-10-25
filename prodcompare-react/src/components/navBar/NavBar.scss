@@ -70,22 +70,31 @@
 .favorites-route {
   grid-column: 4 / 5;
   padding: 0 10px 0 10px 0;
-  text-decoration: underline;
-  color: #6f6f6f;
+  text-decoration: none;
+  border-radius: 5px;
+  background: rgba(40,53,147 ,0.8);
 
   a {
-    color: #6f6f6f;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
   }
 }
 
 .signout-route {
+  margin-left: 10px;
   grid-column: 5 / 6;
   padding: 0 10px 0 10px 0;
-  text-decoration: underline;
-  color: #6f6f6f;
+  text-decoration: none;
+  border-radius: 5px;
+  background: rgba(40,53,147 ,0.8);
 
   a {
-    color: #6f6f6f;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8rem;
   }
 }
 

@@ -105,14 +105,21 @@ class Chart extends React.Component {
       .attr("text-anchor", "middle")
       .attr("x", width / 2 + sizeMetrics.left)
       .attr("y", height + sizeMetrics.top + 10)
-      .text("Shop Favorers");
+      .text("Popularity")
+      .style('font-family', '"Open Sans", sans-serif')
+      .style('font-weight', '700')
+      .style('fill', 'darkgrey');
+
     svg
       .append("text")
       .attr("text-anchor", "middle")
       .attr("transform", "rotate(-90)")
       .attr("y", - 20)
       .attr("x", - sizeMetrics.top - height / 2)
-      .text("Price")
+      .text("£ Price")
+      .style('font-family', '"Open Sans", sans-serif')
+      .style('font-weight', '700')
+      .style('fill', 'darkgrey')
 
     select(this.node).on('click', () => {
       this.setState({ visible: false });
@@ -143,7 +150,7 @@ class Chart extends React.Component {
         .attr("height", img_size)
         .attr("rx", img_size / 4)
         .style("fill", `url(#product${index})`)
-        .style("stroke", 'darkgrey')
+        .style("stroke", 'rgba(105,240,174 ,1)')
         .style("stroke-width", 2);
 
       rectSvg.on('mouseover', d => {

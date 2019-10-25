@@ -50,7 +50,7 @@ class Overlay extends React.Component {
         </div>
         <div className='overlay-info'>
           <strong>PRICE:</strong>
-          {` ${product.price}`}
+          {` £ ${product.price}`}
         </div>
         <div className='overlay-info'>
           <strong>FAVORITED: </strong>
