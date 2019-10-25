@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700|Open+Sans:400,700|Poppins:400,700&display=swap');
+
 .registration {
+  font-family: 'Poppins', sans-serif;
   grid-column: 5 / 6;
   padding: 10px;
   background: rgba(17,153,142, 0.1);
   border-radius: 5px;
-color: #323232
+  color: #323232
 }
 
 .authentication {
+  font-family: 'Poppins', sans-serif;
   grid-column: 6 / 7;
   padding: 10px;
   background: rgba(17,153,142, 0.2);

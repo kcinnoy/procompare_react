@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo:400,700|Open+Sans:400,700|Poppins:400,700&display=swap');
 
 .NavWrapper {
-  // padding-top: 5px;
   padding-left: 0px;
   padding-right: 0px;
   text-align: center;
@@ -23,21 +22,11 @@
   padding: 5px;
 }
 
-// @media screen and (max-width: 900px) {
-//   nav {
-//     grid-template-columns: 100%;
-//     grid-template-rows: auto;
-//     grid-gap: 1em;
-//  }
-// }  
-
 .logo {
   grid-column: 1 / 2;
-  // background-image: url("https://blog.codepen.io/wp-content/uploads/2012/06/Black-Large.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  // height: 10vh;
   padding-left: 10px;
   align-content: center;
   

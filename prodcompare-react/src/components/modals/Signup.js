@@ -43,7 +43,7 @@ const LoginModal = (props) => {
         <div className="authentication">
             <div onClick={toggle}>Sign Up</div>
             <Modal isOpen={modal} toggle={toggle}>
-                <ModalHeader toggle={toggle}>Registration</ModalHeader>
+                <ModalHeader toggle={toggle}>Sign Up</ModalHeader>
                 <ModalBody>
                     {error ? (<h6>Error: {error}</h6>) : null}
                     <Form>
@@ -60,7 +60,7 @@ const LoginModal = (props) => {
                     </Form>
                 </ModalBody>
                 <ModalFooter>
-                    <div className="modal-btn"  onClick={() => submitSignUpForm()}>Register</div>{' '}
+                    <div className="modal-btn"  onClick={() => submitSignUpForm()}>Sign Up</div>{' '}
                     <div className="modal-btn"  onClick={toggle}>Cancel</div>
                 </ModalFooter>
             </Modal>

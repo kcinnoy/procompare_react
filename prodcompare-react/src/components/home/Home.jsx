@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './Home.scss';
-import astroFind from '../astronaut-find.png'; 
+import astroFind from '../astronaut-find2.png'; 
 import { ReactComponent as EmeraldIcon } from '../emerald.svg';
 
 const Home = () => {
