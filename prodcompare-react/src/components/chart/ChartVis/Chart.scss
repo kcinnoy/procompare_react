@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo:400,700|Open+Sans:400,700|Poppins:400,700&display=swap');
+
+.chart-wrapper {
+  background-color: rgba(240,240,240,0.4);
+  border-radius: 10px;
+
+  .overlay {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .axis path{
+    stroke: darkgrey;
+  }
+}
