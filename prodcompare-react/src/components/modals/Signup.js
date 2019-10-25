@@ -1,8 +1,12 @@
-import React, {useState, createContext, useContext} from 'react';
+import React, {useState} from 'react';
 
-import {Button, Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
+import {Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import {Form, FormGroup, Label, Input} from 'reactstrap';
+
+
+import {Toast} from "toaster-js";
+import "toaster-js/default.scss";
 
 import Api from '../../utils/Api';
 
@@ -32,10 +36,11 @@ const LoginModal = (props) => {
                 },
             }
         ).then(response => {
-            alert("Your registration is successful. You can now login.")
+            new Toast("Your registration is successful. You can now login.");
             toggle();
         }).catch(error => {
-            setError("Please provide valid credentials!");
+            new Toast( `${error} - Please provide valid credentials` );
+            // setError("Please provide valid credentials!");
         });
     };
 

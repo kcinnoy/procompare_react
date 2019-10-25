@@ -1,7 +1,8 @@
 import React from 'react'
 
 import './Home.scss';
-import astroFind from '../astronaut-find2.png'; 
+import astroFind from '../astronaut-find.png'; 
+import userIcon from '../user.png'; 
 import { ReactComponent as EmeraldIcon } from '../emerald.svg';
 
 const Home = () => {
@@ -35,7 +36,7 @@ const Home = () => {
           <EmeraldIcon />
           </div>
           <div className="explainer-item">
-            Inspect in detail only the items your interested in
+            Inspect in detail the items you're interested in
           </div>
         </div>
       </div>

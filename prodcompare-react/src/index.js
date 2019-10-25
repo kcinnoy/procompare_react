@@ -12,11 +12,11 @@ import Logout from './utils/LogOut';
 
 import * as serviceWorker from './serviceWorker';
 import { CurrentUserProvider } from "./contexts/CurrentUserContext";
-// import UserAuthenticator from "./utils/UserAuthenticator";
+import UserAuthenticator from "./utils/UserAuthenticator";
 
 const routing = (
     <CurrentUserProvider>
-        {/* <UserAuthenticator /> */}
+        <UserAuthenticator />
     <Router>
         <div>
             <Route exact path="/" component={App} />

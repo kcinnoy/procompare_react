@@ -2,8 +2,9 @@ import React, {useContext, useState} from 'react';
 
 
 import './NavBar.scss';
+import userIcon from '../user.png'; 
 
-import {Collapse, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, NavLink} from "reactstrap";
+
 import LoginModal from "../modals/Login";
 import SignUpModal from "../modals/Signup";
 import {CurrentUserContext} from "../../contexts/CurrentUserContext";
@@ -43,8 +44,11 @@ const NavBar = () => {
 					 <SignUpModal/>
 				}		
 
-      </div>
-			{/* <div className="gradient-border"></div> */}
+        { currentUser() && currentUser().email ?
+          (<div className="user-container"><img className="user-image" alt="user avatar" src={userIcon}></img></div>) : 
+					 ''
+        }	
+      </div>		
     </div>
             
 

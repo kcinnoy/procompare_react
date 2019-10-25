@@ -26,7 +26,7 @@ class Overlay extends React.Component {
           },
         }
     ).then(response => {
-      new Toast("You have successfully marked this product as favorite");
+      new Toast("You have successfully marked this product as favorite")
     }).catch(error => {
      new Toast(error);
     });
