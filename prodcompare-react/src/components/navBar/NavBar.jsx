@@ -5,11 +5,10 @@ import { useSelector, useDispatch } from "react-redux";
 import './NavBar.scss';
 import userIcon from '../user.png'; 
 
-
 import LoginModal from "../modals/Login";
 import SignUpModal from "../modals/Signup";
 // import {CurrentUserContext} from "../../contexts/CurrentUserContext";
-import {logoutAction} from "../actions/logout"
+import {logoutAction} from "../../actions/logout"
 
 const NavBar = () => {
     // const [currentUser, token] = useContext(CurrentUserContext);

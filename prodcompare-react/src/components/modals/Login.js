@@ -3,12 +3,10 @@ import React, {useState} from 'react';
 import {Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-import Api from '../../utils/Api';
-
 import './Modals.scss';
 
 // import {CurrentUserContext} from "../../contexts/CurrentUserContext";
-import { loginAction } from "../actions/login";
+import { loginAction } from "../../actions/login";
 
 import {useDispatch} from "react-redux";
 
