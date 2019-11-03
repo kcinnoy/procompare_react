@@ -1,4 +1,4 @@
-import Api from "../utils/api";
+import Api from "../utils/Api";
 
 export const signupAction = (email, password, handleResponse, handleError) => {
     return dispatch => {

@@ -11,12 +11,14 @@ import Favorites from './components/favorites/Favorites';
 import Logout from './utils/LogOut';
 
 import * as serviceWorker from './serviceWorker';
-import { CurrentUserProvider } from "./contexts/CurrentUserContext";
-import UserAuthenticator from "./utils/UserAuthenticator";
+// import { CurrentUserProvider } from "./contexts/CurrentUserContext";
+// import UserAuthenticator from "./utils/UserAuthenticator";
+
+import {Provider} from 'react-redux';
+import {store} from './stores';
 
 const routing = (
-    <CurrentUserProvider>
-        <UserAuthenticator />
+	<Provider store={store}>
     <Router>
         <div>
             <Route exact path="/" component={App} />
@@ -25,7 +27,7 @@ const routing = (
             <Route exact path="/logout" component={Logout} />
         </div>
     </Router>
-    </CurrentUserProvider>
+	</Provider>
 );
 
 ReactDOM.render(routing, document.getElementById('root'));
