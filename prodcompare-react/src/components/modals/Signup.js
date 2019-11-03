@@ -4,15 +4,18 @@ import {Modal, ModalHeader, ModalBody, ModalFooter} from 'reactstrap';
 
 import {Form, FormGroup, Label, Input} from 'reactstrap';
 
-
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
 
 import Api from '../../utils/Api';
 
+import {useDispatch} from "react-redux";
+import {signupAction} from "../actions/signup";
+
 import './Modals.scss';
 
 const LoginModal = (props) => {
+    const dispatch = useDispatch();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [modal, setModal] = useState(false);
@@ -24,24 +27,21 @@ const LoginModal = (props) => {
         setModal(!modal);
     };
 
-    const submitSignUpForm = async () => {
-        let response = await Api.post('/users.json', {
-                email: email,
-                password: password
-            }, {
-                withCredentials: true,
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                },
-            }
-        ).then(response => {
-            new Toast("Your registration is successful. You can now login.");
-            toggle();
-        }).catch(error => {
-            new Toast( `${error} - Please provide valid credentials` );
-            // setError("Please provide valid credentials!");
-        });
+    const handleSuccess = (response) => {
+        console.log(response.status);
+       if(response.status == 201) {
+           toggle()
+           alert("Your registration is successful. You can now login.")
+       } else {
+           setError("Please provide valid credentials!");
+       }
+    };
+
+    const handleError = (error) => {
+    };
+
+    const submitSignUpForm =  () => {
+			dispatch(signupAction(email, password, handleSuccess, handleError))
     };
 
     return (
