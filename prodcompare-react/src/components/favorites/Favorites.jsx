@@ -9,14 +9,16 @@ import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
 
 import {
-    Container, Row, Col, Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, Button
-} from 'reactstrap';
+    Container, Row, Col, Card, CardImg, CardText, CardBody,CardTitle, CardSubtitle, Button} from 'reactstrap';
 
-import {CurrentUserContext} from "../../contexts/CurrentUserContext";
+// import {CurrentUserContext} from "../../contexts/CurrentUserContext";
+import {useDispatch, useSelector} from "react-redux";
+
 
 const Favorites = () => {
-    const [currentUser, setCurrentUser] = useContext(CurrentUserContext);
+    // const [currentUser, setCurrentUser] = useContext(CurrentUserContext);
+    const authenticationData = useSelector(state => state.authenticationData );
+
     const [favorites, setFavorites] = useState([]);
 
     const loadFavorites = async () => {
