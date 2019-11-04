@@ -1,33 +1,21 @@
-import React, {useContext} from 'react';
-
-import {CurrentUserContext} from "../contexts/CurrentUserContext";
-
+import React from 'react';
 import {Redirect} from 'react-router-dom';
-import Api from "./Api";
+import {useSelector, useDispatch} from "react-redux";
+
+// import {CurrentUserContext} from "../contexts/CurrentUserContext";
+
 import {Toast} from "toaster-js";
 import "toaster-js/default.scss";
 
+import { logoutAction } from "../actions/logout"
+
 const Logout = () => {
-    const [currentUser, token, setToken] = useContext(CurrentUserContext);
+    const dispatch = useDispatch();
+    const token = useSelector(state => state.authenticationData.token );
 
-    const logout = async () => {
-        await Api.delete('/users/logout.json', {}, {
-                withCredentials: true,
-                headers: {
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json',
-                    'Authorization': localStorage.getItem('token')
-                },
-            }
-        ).then(response => {
-            localStorage.clear();
-            setToken(null);
-            new Toast("You have successfully logged out!");
-
-        })
+    const logout = () => {
+        logoutAction(token)
     };
-
-    logout();
 
     return(
         <Redirect to="/" />

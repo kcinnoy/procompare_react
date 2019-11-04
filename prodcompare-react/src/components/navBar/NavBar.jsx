@@ -48,7 +48,7 @@ const NavBar = () => {
 
 					{/* Show logout or Signup modal*/}
           {authenticationData.user && authenticationData.user.email ?
-					  (<div className="signout-route"><a href="/logout/">Sign out</a></div>) : 
+					  (<div className="signout-route"><a onClick={() => logout()} href={null}>Sign out</a></div>) : 
 					  <SignUpModal/>
 				  }		
 
