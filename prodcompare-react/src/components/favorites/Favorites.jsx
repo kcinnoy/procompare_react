@@ -62,9 +62,8 @@ const Favorites = () => {
                       <Col lg="3" key={product.id} className="float-left" style={{padding: '.5rem'}}>
                         <div>
                             <Card>
-															{product.image ?
-																(<CardImg top height="400px" src={product.image} alt="Card image cap"/>) : null}
-                                  <CardBody className="card-body">
+															{product.image ?(<CardImg top height="400px" src={product.image} alt="Card image cap"/>) : null}
+                                  <CardBody>
                                     <CardTitle className="card-title">{product.title.slice(0, 60)}</CardTitle>
                                       <CardSubtitle>Price: £{product.price}</CardSubtitle>
                                             <CardText>Favorited {product.num_favorers} times </CardText>

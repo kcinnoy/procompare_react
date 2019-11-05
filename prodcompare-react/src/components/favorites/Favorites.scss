@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo:400,700|Open+Sans:400,700|Poppins:400,700&display=swap');
 
-// .card {
-//   border: solid 1px red;
-// }
+.card-img-top {
+  border-top: 1px solid #eaeaea;
+}
+
+.card {
+  border: 1px solid #eaeaea;
+}
 
 .favorite-title {
   padding: 20px;
@@ -15,6 +19,7 @@
 .card-body {
   background: rgba(40,53,147 ,0.8);
   color: white;
+  margin: 2px;
 }
 
 div.card-title {
