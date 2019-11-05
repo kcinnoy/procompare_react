@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useSelector, useDispatch } from "react-redux";
+import {NavLink} from 'react-router-dom';
 
 
 import './NavBar.scss';
@@ -28,20 +29,20 @@ const NavBar = () => {
     <div className="NavWrapper">
       <div className="nav">
         <div className="logo">
-          <a href="/" className="navLinks">
+          <NavLink to="/" className="navLinks">
 						<div className="logo-image">P</div>
-					</a>
+					</NavLink>
         </div>
 
 				
         <div className="brand">
-          <a href="/">ProdCompare</a>
+          <NavLink to="/">ProdCompare</NavLink>
         </div>
 				
 				{/* Show favorites or Login modal*/}
 				{authenticationData.user && authenticationData.user.email ?
 					(<div className="favorites-route">
-						<a href="/favorites/">Favorites</a>
+						<NavLink to="/favorites/">Favorites</NavLink>
 					</div>) : 
 					<LoginModal />
 				}
