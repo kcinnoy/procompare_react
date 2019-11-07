@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import NavBar from '../navBar';
 
@@ -17,9 +17,11 @@ import {useDispatch, useSelector} from "react-redux";
 
 const Favorites = () => {
     // const [currentUser, setCurrentUser] = useContext(CurrentUserContext);
-    const authenticationData = useSelector(state => state.authenticationData );
-
-    const [favorites, setFavorites] = useState([]);
+		const authenticationData = useSelector(state => state.authenticationData );
+		
+		const [favorites, setFavorites] = useState([]);
+		
+		const [starCounts, setStarcount] = useState({id:'', count:0});
 
     const loadFavorites = async () => {
         let result = await Api.get("/favorites", {
@@ -48,7 +50,15 @@ const Favorites = () => {
         }).catch(error => {
             new Toast(error);
         });
-    };
+		};
+		
+		// const addStar = (product) => {
+		// 	let id = product.id
+		// 	setStarcount({starCounts[id] = starCounts[id] ? starCounts[id] + 1 : 1 } ) 		
+		// }
+
+		const addStar = (id) => { stars[id] = stars[id] ? stars[id] +1 : 1}
+
 
     return (
        
@@ -68,6 +78,8 @@ const Favorites = () => {
                                       <CardSubtitle>Price: £{product.price}</CardSubtitle>
                                             <CardText>Favorited {product.num_favorers} times </CardText>
                                             <Button className="remove-btn" onClick={() => removeFavorite(product)}>Remove</Button>
+																						<Button className="remove-btn" onClick={() => addStar(product)}>Star</Button>
+																						<div>*{starCount}</div>
                                         </CardBody>
                                     </Card>
                                 </div>
