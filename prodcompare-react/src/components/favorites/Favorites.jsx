@@ -21,7 +21,10 @@ const Favorites = () => {
 		
 		const [favorites, setFavorites] = useState([]);
 		
-		const [starCounts, setStarcount] = useState({id:'', count:0});
+		const [starCount, setStarcount] = useState([
+			{nameID: {fame: "value1"}}
+
+		]);
 
     const loadFavorites = async () => {
         let result = await Api.get("/favorites", {
@@ -52,12 +55,16 @@ const Favorites = () => {
         });
 		};
 		
-		// const addStar = (product) => {
-		// 	let id = product.id
-		// 	setStarcount({starCounts[id] = starCounts[id] ? starCounts[id] + 1 : 1 } ) 		
-		// }
+		const addStar = (product) => {
+			let id = product.id
+			setStarcount([...starCount,
+				{
+					[id]: {count: starCount[id] = starCount[id] ? starCount[id].count + 1: 1 }
+				}]
+			) 		
+		}
 
-		const addStar = (id) => { stars[id] = stars[id] ? stars[id] +1 : 1}
+		// const addStar = (id) => { stars[id] = stars[id] ? stars[id] +1 : 1}
 
 
     return (
@@ -73,14 +80,16 @@ const Favorites = () => {
                         <div>
                             <Card>
 															{product.image ?(<CardImg top height="400px" src={product.image} alt="Card image cap"/>) : null}
-                                  <CardBody>
+                                <CardBody>
                                     <CardTitle className="card-title">{product.title.slice(0, 60)}</CardTitle>
                                       <CardSubtitle>Price: £{product.price}</CardSubtitle>
-                                            <CardText>Favorited {product.num_favorers} times </CardText>
-                                            <Button className="remove-btn" onClick={() => removeFavorite(product)}>Remove</Button>
-																						<Button className="remove-btn" onClick={() => addStar(product)}>Star</Button>
-																						<div>*{starCount}</div>
-                                        </CardBody>
+                                        <CardText>Favorited {product.num_favorers} times </CardText>
+                                        <Button className="remove-btn" onClick={() => removeFavorite(product)}>Remove</Button>
+											<Button className="remove-btn" onClick={() => addStar(product)}>Star</Button>
+															
+											<div>*{starCount.nameID}</div>
+																				
+                                </CardBody>
                                     </Card>
                                 </div>
                             </Col>
